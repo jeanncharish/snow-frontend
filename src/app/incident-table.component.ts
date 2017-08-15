@@ -33,7 +33,8 @@ import { IncidentSummary } from './incident-summary.component';
 				<table class="table table-bordered" width="100%" id="dataTable" cellspacing="0">
 				  <thead>
 					<tr>
-					  <th>Incident</th>
+						<th>Incident</th>
+						<th>Domain</th>
 					  <th>Subject</th>
 					  <th>Description</th>
 					  </tr>
@@ -41,14 +42,15 @@ import { IncidentSummary } from './incident-summary.component';
 				  <tbody>
 					<tr>
 					  <td>
-						<a routerLink="/incident-summary" routerLinkActive="active">INC12345</a>
-					  </td>
+							<a routerLink="/incident-summary" routerLinkActive="active">INC12345</a>
+						</td>
+						<td>assignment_group</td>	
 					  <td>Calls dropping</td>
 					  <td>Why my calls dropped unexpectedly</td>
 					</tr>
 				  </tbody>
 				</table>
-			  <!-- </div> -->s
+			  <!-- </div> -->
 			  <!-- /.dataTable_wrapper -->
             </div>
 			<!-- /.table-responsive -->
