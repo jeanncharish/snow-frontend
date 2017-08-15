@@ -34,4 +34,4 @@ AppModule = __decorate([
     })
 ], AppModule);
 exports.AppModule = AppModule;
-//# sourceMappingURL=C:/Users/jeann/Documents/Snow/snow-frontend/src/app/app.module.js.map
+//# sourceMappingURL=C:/Users/jeann.c.d.abihay/Documents/SnowProject/snow-frontend/src/app/app.module.js.map

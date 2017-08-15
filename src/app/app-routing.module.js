@@ -34,4 +34,4 @@ AppRoutingModule = __decorate([
 ], AppRoutingModule);
 exports.AppRoutingModule = AppRoutingModule;
 exports.routingComponents = [app_component_1.AppComponent, incident_table_component_1.IncidentTable, incident_summary_component_1.IncidentSummary, acip_resolutions_component_1.ACIPResolutions];
-//# sourceMappingURL=C:/Users/jeann/Documents/Snow/snow-frontend/src/app/app-routing.module.js.map
+//# sourceMappingURL=C:/Users/jeann.c.d.abihay/Documents/SnowProject/snow-frontend/src/app/app-routing.module.js.map

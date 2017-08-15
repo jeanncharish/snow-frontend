@@ -24,4 +24,4 @@ describe('AppComponent', function () {
         expect(h1.innerText).toMatch(/angular/i, '<h1> should say something about "Angular"');
     });
 });
-//# sourceMappingURL=C:/Users/jeann/Documents/Snow/snow-frontend/src/app/app.component.spec.js.map
+//# sourceMappingURL=C:/Users/jeann.c.d.abihay/Documents/SnowProject/snow-frontend/src/app/app.component.spec.js.map

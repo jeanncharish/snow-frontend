@@ -2,4 +2,4 @@
 var platform_browser_dynamic_1 = require("@angular/platform-browser-dynamic");
 var app_module_1 = require("./app/app.module");
 platform_browser_dynamic_1.platformBrowserDynamic().bootstrapModule(app_module_1.AppModule);
-//# sourceMappingURL=C:/Users/jeann/Documents/Snow/snow-frontend/src/main.js.map
+//# sourceMappingURL=C:/Users/jeann.c.d.abihay/Documents/SnowProject/snow-frontend/src/main.js.map
