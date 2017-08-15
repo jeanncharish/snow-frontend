@@ -25,39 +25,47 @@ import { ACIPResolutions }  from './acip-resolutions.component';
 			<div class="container">
 				<form>
 					<div class="form-group row">
-						<label for="incidentNumber" class="col-sm-1.5 col-form-label">Number</label>
-						<div class="col-sm-4">
-							<input type="text" class="form-control" id="incidentNumber">
+						<label for="incidentNumber" class="col-sm-1.5 col-form-label col-form-label-sm">Number</label>
+						<div class="col-sm-4" style="margin-right:111px">
+							<input type="text" class="form-control form-control-sm" id="incidentNumber">
 						</div>
-						<label for="dateOpened" class="col-sm-1.5 col-form-label">Opened</label>
+						<label for="dateOpened" class="col-sm-1.5 col-form-label col-form-label-sm">Opened</label>
 						<div class="col-sm-4">
-							<input type="date" class="form-control" id="dateOpened">
+							<input type="date" class="form-control form-control-sm" id="dateOpened">
 						</div>
 					</div>
 					<div class="form-group row">
-						<label for="incidentSubj" class="col-sm-1.5 col-form-label">Subject</label>
-						<div class="col-sm-4">
-							<input type="text" class="form-control" id="incidentSubj">
+						<label for="incidentDomain" class="col-sm-1.5 col-form-label col-form-label-sm" style="margin-right:2px">Domain</label>
+						<div class="col-sm-4" style="margin-right:111px">
+							<input type="text" class="form-control form-control-sm" id="incidentDomain">
 						</div>
-						<label for="dateClosed" class="col-sm-1.5 col-form-label">Closed</label>
+						<label for="dateClosed" class="col-sm-1.5 col-form-label col-form-label-sm" style="margin-right:8px">Closed</label>
 						<div class="col-sm-4">
-							<input type="date" class="form-control" id="dateClosed">
+							<input type="date" class="form-control form-control-sm" id="dateClosed">
 						</div>
 					</div>
 					<div class="form-group row">
-						<label for="shortDescription" class="col-sm-1.5 col-form-label">Short Description</label>
-						<div class="col-sm-8">
-							<input type="text" class="form-control" id="shortDescription">
+						<label for="incidentSubj" class="col-sm-1.5 col-form-label col-form-label-sm" style="margin-right:5px">Subject</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control form-control-sm" id="incidentSubj">
 						</div>
-					<button type="button" class="btn btn-primary" routerLink="/acip-resolutions" routerLinkActive="active">ACIP Resolutions</button>
 					</div>
 					<div class="form-group row">
-						<label for="resolution" class="col-sm-1.5 col-form-label">ACIP Resolution</label>
-						<div class="col-sm-8">
-							<input type="text" class="form-control" id="resolution">
+						<label for="shortDescription" class="col-sm-1.5 col-form-label col-form-label-sm" style="margin-right:22px">Short Description</label>
+						<div class="col-sm-9">
+							<textarea class="form-control form-control-sm" id="shortDescription"></textarea>
 						</div>
-					<button type="button" class="btn btn-primary" routerLink="#">Resolve</button>
+					<button type="button" class="btn btn-primary btn-sm" style="width:110px;height:35px;" routerLink="/acip-resolutions" routerLinkActive="active">ACIP Solutions</button>
 					</div>
+					<div class="form-group row">
+						<label for="resolution" class="col-sm-1.5 col-form-label col-form-label-sm" style="margin-right:30px">ACIP Resolution</label>
+						<div class="col-sm-9">
+							<textarea class="form-control form-control-sm" id="resolution"></textarea>
+						</div>
+					</div>
+					<br/>
+					<button type="button" class="btn btn-success btn-sm" style="margin-left:-15px" routerLink="#">Resolve</button>
+					<button type="button" class="btn btn-danger btn-sm" routerLink="/incident-table" routerLinkActive="active">Cancel</button>
 				</form>
 			</div>
 		  </div>
