@@ -4,35 +4,53 @@ import { Component } from '@angular/core';
   selector: 'acip-resolutions',
   template: `
 	<div class="content-wrapper py-3">
-      <div class="container-fluid">
-		<!-- Breadcrumbs -->
+    <div class="container-fluid">
+		  <!-- Breadcrumbs -->
         <ol class="breadcrumb">
-		  <li class="breadcrumb-item">
-            <a href="#">Incidents</a>
+		      <li class="breadcrumb-item">
+            <a routerLink="/incident-table" routerLinkActive="active">Incidents</a>
           </li>	
-          <li class="breadcrumb-item active">ACIP Resolutions</li>
+          <li class="breadcrumb-item active">ACIP Solutions</li>
         </ol>
 		
-		<!-- Example Tables Card -->
+		    <!-- ACIP Solutions -->
         <div class="card mb-3">
           <div class="card-header">
             <i class="fa fa-table"></i>
-            ACIP Resolutions
+            ACIP Solutions
           </div>
-		  <div class="card-body">
-            <div class="table-responsive">
+		       <div class="card-body">
               <table class="table table-bordered" width="100%" id="dataTable" cellspacing="0">
-                
+                <div class="card-body">
+                  <h3 class="card-title">ACIP Solution #1</h3>
+                  <h5>Solution Description</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam sequi pariatur praesentium animi perspiciatis molestias iure, ducimus!</p>
+                  <div class="form-group row">
+                    <button type="button" class="btn btn-success btn-sm" style="margin-left:16px" routerLink="#">Use Resolution</button>
+                    <label for="shortDescription" class="col-sm-1.5 col-form-label col-form-label-sm" style="margin-left:600px">Rating:</label>
+                    <div class="col-sm-1">
+                      <div id="dataTable_filter" class="dataTable_filter">
+                        <select class="form-control form-control-sm">
+                          <option>0</option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                      </div>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-sm" style="margin-left:-5px" routerLink="#">Submit</button>
+                  </div>
+                </div>  
               </table>
-            </div>
            </div>
+        </div>
 		</div>
-	  </div>
 	  <!-- /.container-fluid -->
 	</div>
 	<!-- /.content-wrapper -->
 	<router-outlet></router-outlet>
-	
   `
 })
 
