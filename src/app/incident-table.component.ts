@@ -69,7 +69,8 @@ import { SnowExtractService } from './snowextract.service';
   providers: [SnowExtractService]
 })
 export class IncidentTable {
-	tickets: any;
+	
+  tickets: any;
 
   constructor(private snowextractService:SnowExtractService) { 
     this.snowextractService.getTickets().subscribe( tickets=>{

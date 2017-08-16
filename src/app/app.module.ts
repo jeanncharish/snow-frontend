@@ -14,6 +14,7 @@ import { SnowExtractService } from './snowextract.service';
 @NgModule({
   imports:      [ 
 	BrowserModule,
+	HttpModule,
 	AppRoutingModule
   ],
   declarations: [ 

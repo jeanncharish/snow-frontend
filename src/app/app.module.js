@@ -7,11 +7,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
+var http_1 = require("@angular/http");
 var app_routing_module_1 = require("./app-routing.module");
 var app_component_1 = require("./app.component");
 var incident_table_component_1 = require("./incident-table.component");
 var incident_summary_component_1 = require("./incident-summary.component");
 var acip_resolutions_component_1 = require("./acip-resolutions.component");
+var snowextract_service_1 = require("./snowextract.service");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -21,6 +23,7 @@ AppModule = __decorate([
     core_1.NgModule({
         imports: [
             platform_browser_1.BrowserModule,
+            http_1.HttpModule,
             app_routing_module_1.AppRoutingModule
         ],
         declarations: [
@@ -29,6 +32,9 @@ AppModule = __decorate([
             incident_table_component_1.IncidentTable,
             incident_summary_component_1.IncidentSummary,
             acip_resolutions_component_1.ACIPResolutions
+        ],
+        providers: [
+            snowextract_service_1.SnowExtractService
         ],
         bootstrap: [app_component_1.AppComponent]
     })
