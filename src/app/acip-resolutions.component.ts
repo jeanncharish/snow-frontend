@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { SnowExtractService } from './snowextract.service';
+
 @Component({
   selector: 'acip-resolutions',
   template: `
@@ -22,12 +24,12 @@ import { Component } from '@angular/core';
             <i class="fa fa-table"></i>
             ACIP Solutions
           </div>
-		       <div class="card-body">
+		       <div class="card-body" *ngFor="let ticket of tickets; let i = index">
               <table class="table table-bordered" width="100%" id="dataTable" cellspacing="0">
                 <div class="card-body">
-                  <h3 class="card-title">ACIP Solution #1</h3>
-                  <h5>Solution Description</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam sequi pariatur praesentium animi perspiciatis molestias iure, ducimus!</p>
+                  <h3 class="card-title">ACIP Solution #{{ticket.id}}</h3>
+                  <h5>{{ticket.title}}</h5>
+                  <p class="card-text">{{ticket.body}}</p>
                   <div class="form-group row">
                     <button type="button" class="btn btn-success btn-sm" style="margin-left:16px" routerLink="#">Use Resolution</button>
                     <label for="shortDescription" class="col-sm-1.5 col-form-label col-form-label-sm" style="margin-left:550px">Rating:</label>
@@ -53,7 +55,17 @@ import { Component } from '@angular/core';
 	</div>
 	<!-- /.content-wrapper -->
 	<router-outlet></router-outlet>
-  `
+  `,
+  providers: [SnowExtractService]
 })
 
-export class ACIPResolutions { }
+export class ACIPResolutions {
+  
+  tickets: any;
+
+  constructor(private snowextractService:SnowExtractService) { 
+    this.snowextractService.getTickets().subscribe( tickets=>{
+      console.log(tickets);
+	  this.tickets = tickets;
+    });
+}

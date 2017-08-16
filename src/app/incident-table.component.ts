@@ -42,13 +42,13 @@ import { SnowExtractService } from './snowextract.service';
 					  </tr>
 				  </thead>
 				  <tbody>
-					<tr>
+					<tr *ngFor="let ticket of tickets; let i = index">
 					  <td>
-							<a routerLink="/incident-summary" routerLinkActive="active">INC12345</a>
+							<a routerLink="/incident-summary" routerLinkActive="active">{{ticket.userId}}</a>
 						</td>
-						<td>assignment_group</td>	
-					  <td>Calls dropping</td>
-					  <td>Why my calls dropped unexpectedly</td>
+						<td>{{ticket.id}}</td>	
+					  <td>{{ticket.title}}</td>
+					  <td>{{ticket.body}}</td>
 					</tr>
 				  </tbody>
 				</table>
@@ -75,7 +75,7 @@ export class IncidentTable {
   constructor(private snowextractService:SnowExtractService) { 
     this.snowextractService.getTickets().subscribe( tickets=>{
       console.log(tickets);
-/*    this.tickets = tickets; */
+	  this.tickets = tickets;
     });
   }
 /*
