@@ -10,7 +10,7 @@ import { ACIPResolutions }  from './acip-resolutions.component';
 		<!-- Breadcrumbs -->
         <ol class="breadcrumb">
 		  <li class="breadcrumb-item">
-            <a href="#">Incidents</a>
+            <a routerLink="/incident-table" routerLinkActive="active">Incidents</a>
           </li>	
           <li class="breadcrumb-item active">Incident Details</li>
         </ol>
