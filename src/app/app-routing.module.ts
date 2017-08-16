@@ -7,11 +7,11 @@ import { IncidentSummary }  from './incident-summary.component';
 import { ACIPResolutions }  from './acip-resolutions.component';
 
 const APP_ROUTES: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'my-app' },
+  { path: '', pathMatch: 'full', redirectTo: 'incident-table' },
   { path: 'incident-table', component: IncidentTable },
   { path: 'incident-summary', component: IncidentSummary },
   { path: 'acip-resolutions', component: ACIPResolutions }
- ];
+];
  
  @NgModule({
 	 imports: [
@@ -23,4 +23,9 @@ const APP_ROUTES: Routes = [
  })
 export class AppRoutingModule {}
 
-export const routingComponents = [AppComponent, IncidentTable, IncidentSummary, ACIPResolutions];
+export const routingComponents = [
+	AppComponent,
+	IncidentTable, 
+	IncidentSummary, 
+	ACIPResolutions
+];

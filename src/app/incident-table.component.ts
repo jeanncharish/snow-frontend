@@ -43,8 +43,8 @@ import { SnowExtractService } from './snowextract.service';
 				  </thead>
 				  <tbody>
 					<tr *ngFor="let ticket of tickets; let i = index">
-					  <td>
-							<a routerLink="/incident-summary" routerLinkActive="active">{{ticket.userId}}</a>
+					  <td [routerLinkActive]="['active']">
+							<a routerLink="/incident-summary">{{ticket.userId}}</a>
 						</td>
 						<td>{{ticket.id}}</td>	
 					  <td>{{ticket.title}}</td>

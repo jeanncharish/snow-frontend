@@ -12,7 +12,7 @@ var incident_table_component_1 = require("./incident-table.component");
 var incident_summary_component_1 = require("./incident-summary.component");
 var acip_resolutions_component_1 = require("./acip-resolutions.component");
 var APP_ROUTES = [
-    { path: '', pathMatch: 'full', redirectTo: 'my-app' },
+    { path: '', pathMatch: 'full', redirectTo: 'incident-table' },
     { path: 'incident-table', component: incident_table_component_1.IncidentTable },
     { path: 'incident-summary', component: incident_summary_component_1.IncidentSummary },
     { path: 'acip-resolutions', component: acip_resolutions_component_1.ACIPResolutions }
@@ -33,5 +33,10 @@ AppRoutingModule = __decorate([
     })
 ], AppRoutingModule);
 exports.AppRoutingModule = AppRoutingModule;
-exports.routingComponents = [app_component_1.AppComponent, incident_table_component_1.IncidentTable, incident_summary_component_1.IncidentSummary, acip_resolutions_component_1.ACIPResolutions];
+exports.routingComponents = [
+    app_component_1.AppComponent,
+    incident_table_component_1.IncidentTable,
+    incident_summary_component_1.IncidentSummary,
+    acip_resolutions_component_1.ACIPResolutions
+];
 //# sourceMappingURL=C:/Users/jeann.c.d.abihay/Documents/SnowProject/snow-frontend/src/app/app-routing.module.js.map

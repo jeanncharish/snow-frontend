@@ -68,4 +68,5 @@ export class ACIPResolutions {
       console.log(tickets);
 	  this.tickets = tickets;
     });
+  }
 }
