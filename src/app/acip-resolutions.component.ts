@@ -10,6 +10,9 @@ import { Component } from '@angular/core';
 		      <li class="breadcrumb-item">
             <a routerLink="/incident-table" routerLinkActive="active">Incidents</a>
           </li>	
+          <li class="breadcrumb-item">
+            <a routerLink="/incident-summary" routerLinkActive="active">Incident Details</a>
+          </li>
           <li class="breadcrumb-item active">ACIP Solutions</li>
         </ol>
 		
@@ -27,7 +30,7 @@ import { Component } from '@angular/core';
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam sequi pariatur praesentium animi perspiciatis molestias iure, ducimus!</p>
                   <div class="form-group row">
                     <button type="button" class="btn btn-success btn-sm" style="margin-left:16px" routerLink="#">Use Resolution</button>
-                    <label for="shortDescription" class="col-sm-1.5 col-form-label col-form-label-sm" style="margin-left:600px">Rating:</label>
+                    <label for="shortDescription" class="col-sm-1.5 col-form-label col-form-label-sm" style="margin-left:550px">Rating:</label>
                     <div class="col-sm-1">
                       <div id="dataTable_filter" class="dataTable_filter">
                         <select class="form-control form-control-sm">
@@ -36,11 +39,10 @@ import { Component } from '@angular/core';
                           <option>2</option>
                           <option>3</option>
                           <option>4</option>
-                          <option>5</option>
                         </select>
                       </div>
                     </div>
-                    <button type="button" class="btn btn-primary btn-sm" style="margin-left:-5px" routerLink="#">Submit</button>
+                    <button type="button" class="btn btn-primary btn-sm" style="margin-left:-5px" routerLink="#">Submit Rating</button>
                   </div>
                 </div>  
               </table>
