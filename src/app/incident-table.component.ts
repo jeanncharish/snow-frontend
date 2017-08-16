@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { IncidentSummary } from './incident-summary.component';
 
+import { SnowExtractService } from './snowextract.service';
+
 @Component({
   selector: 'incident-table',
   template: `
@@ -63,6 +65,30 @@ import { IncidentSummary } from './incident-summary.component';
 	</div>
 	<!-- /.content-wrapper -->
 	<router-outlet></router-outlet>
-  `
+  `,
+  providers: [SnowExtractService]
 })
-export class IncidentTable { }
+export class IncidentTable {
+	tickets: any;
+
+  constructor(private snowextractService:SnowExtractService) { 
+    this.snowextractService.getTickets().subscribe( tickets=>{
+      console.log(tickets);
+/*    this.tickets = tickets; */
+    });
+  }
+/*
+  tickets: any;
+  activeticket: any;
+
+  ngOnInit() {
+    this.snowextractService.query().subscribe(
+      exttickets => {
+        this.tickets = exttickets;
+      },
+      error => console.log(error)
+    );
+    console.log(this.tickets)
+  }
+*/
+}
