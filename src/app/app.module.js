@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var http_1 = require("@angular/http");
+var ng2_pagination_1 = require("ng2-pagination");
 var app_routing_module_1 = require("./app-routing.module");
 var app_component_1 = require("./app.component");
 var incident_table_component_1 = require("./incident-table.component");
@@ -24,7 +25,8 @@ AppModule = __decorate([
         imports: [
             platform_browser_1.BrowserModule,
             http_1.HttpModule,
-            app_routing_module_1.AppRoutingModule
+            app_routing_module_1.AppRoutingModule,
+            ng2_pagination_1.Ng2PaginationModule
         ],
         declarations: [
             app_component_1.AppComponent,

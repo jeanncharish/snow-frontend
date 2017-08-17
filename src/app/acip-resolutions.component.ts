@@ -18,40 +18,44 @@ import { SnowExtractService } from './snowextract.service';
           <li class="breadcrumb-item active">ACIP Solutions</li>
         </ol>
 		
-		    <!-- ACIP Solutions -->
+		<!-- ACIP Solutions -->
         <div class="card mb-3">
-          <div class="card-header">
-            <i class="fa fa-table"></i>
-            ACIP Solutions
-          </div>
-		       <div class="card-body" *ngFor="let ticket of tickets; let i = index">
-              <table class="table table-bordered" width="100%" id="dataTable" cellspacing="0">
-                <div class="card-body">
-                  <h3 class="card-title">ACIP Solution #{{ticket.id}}</h3>
-                  <h5>{{ticket.title}}</h5>
-                  <p class="card-text">{{ticket.body}}</p>
-                  <div class="form-group row">
-                    <button type="button" class="btn btn-success btn-sm" style="margin-left:16px" routerLink="#">Use Resolution</button>
-                    <label for="shortDescription" class="col-sm-1.5 col-form-label col-form-label-sm" style="margin-left:550px">Rating:</label>
-                    <div class="col-sm-1">
-                      <div id="dataTable_filter" class="dataTable_filter">
-                        <select class="form-control form-control-sm">
-                          <option>0</option>
-                          <option>1</option>
-                          <option>2</option>
-                          <option>3</option>
-                          <option>4</option>
-                        </select>
-                      </div>
-                    </div>
-                    <button type="button" class="btn btn-primary btn-sm" style="margin-left:-5px" routerLink="#">Submit Rating</button>
-                  </div>
-                </div>  
-              </table>
-           </div>
-        </div>
+			<div class="card-header">
+				<i class="fa fa-table"></i>
+				ACIP Solutions
+			</div>
+			<div class="card-body">
+				<table class="table table-bordered" width="100%" id="dataTable" cellspacing="0">
+					<div class="card-body" *ngFor="let ticket of tickets | paginate: {itemsPerPage: 7, currentPage:page, id: '1'}; let i = index">
+						<h3 class="card-title">ACIP Solution #{{ticket.id}}</h3>
+						<h5>{{ticket.title}}</h5>
+						<p class="card-text">{{ticket.body}}</p>
+						<div class="form-group row">
+							<button type="button" class="btn btn-success btn-sm" style="margin-left:16px" routerLink="/incident-summary" routerLinkActive="active">Use Resolution</button>
+							<label for="shortDescription" class="col-sm-1.5 col-form-label col-form-label-sm" style="margin-left:550px">Rating:</label>
+							<div class="col-sm-1">
+								<div id="dataTable_filter" class="dataTable_filter">
+									<select class="form-control form-control-sm">
+										<option>0</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+									</select>
+								</div>
+							</div>
+							<button type="button" class="btn btn-primary btn-sm" style="margin-left:-5px" routerLink="#">Submit Rating</button>
+						</div>
+						<hr/>
+					</div>
+					<div class="absolute-right">
+						<pagination-controls (pageChange)="page = $event" id="1" maxSize="5" directionLinks="true" autoHide="true"></pagination-controls>
+					</div>
+				</table>
+			</div>
 		</div>
-	  <!-- /.container-fluid -->
+	</div>
+	<!-- /.container-fluid -->
 	</div>
 	<!-- /.content-wrapper -->
 	<router-outlet></router-outlet>

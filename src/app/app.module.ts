@@ -1,6 +1,7 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
+import { Ng2PaginationModule } from 'ng2-pagination';
 
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 
@@ -15,7 +16,8 @@ import { SnowExtractService } from './snowextract.service';
   imports:      [ 
 	BrowserModule,
 	HttpModule,
-	AppRoutingModule
+	AppRoutingModule,
+	Ng2PaginationModule
   ],
   declarations: [ 
 	AppComponent,

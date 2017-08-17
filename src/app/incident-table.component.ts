@@ -42,7 +42,7 @@ import { SnowExtractService } from './snowextract.service';
 					  </tr>
 				  </thead>
 				  <tbody>
-					<tr *ngFor="let ticket of tickets; let i = index">
+					<tr *ngFor="let ticket of tickets | paginate: {itemsPerPage: 7, currentPage:page, id: '1'}; let i=index">
 					  <td [routerLinkActive]="['active']">
 							<a routerLink="/incident-summary">{{ticket.userId}}</a>
 						</td>
@@ -52,6 +52,9 @@ import { SnowExtractService } from './snowextract.service';
 					</tr>
 				  </tbody>
 				</table>
+				<div class="absolute-right">
+					<pagination-controls (pageChange)="page = $event" id="1" maxSize="5" directionLinks="true" autoHide="true"></pagination-controls>		
+				</div>
 			  <!-- </div> -->
 			  <!-- /.dataTable_wrapper -->
             </div>
